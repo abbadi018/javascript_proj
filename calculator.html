@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <style>
+    body {
+      text-align: center;
+      vertical-align: center;
+    }
+
+    button {
+      height: 40px;
+      background-color: darkgray;
+      width: 80px;
+    }
+
+    .button2 {
+      background-color: lightgray;
+    }
+
+    .cal {
+
+      padding: 20px;
+      box-shadow:
+
+    }
+
+    #d_b {
+      background-color: lightblue;
+    }
+
+    #display {
+      width: 325px;
+      height: 60px;
+    }
+  </style>
+  <script>
+    function clear12() {
+
+      document.getElementById('display').value = '';
+
+    }
+
+    function display(value) {
+      var currentDisplay = document.getElementById('display').value;
+
+     
+      if (value === '.' && currentDisplay.slice(-1) === '.') {
+       
+        return;
+      }
+
+      document.getElementById('display').value += value;
+    }
+
+
+    function calculate() {
+
+      try {
+        document.getElementById('display').value = eval(document.getElementById('display').value);
+      } catch (error) {
+        document.getElementById('display').value = 'Error';
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="cal">
+    <input id="display" type="text" readonly>
+    <br>
+
+    <br>
+    <button onclick="display('(')" class="button2">(</button>
+
+    <button onclick="display(')')" class="button2">)</button>
+    <button onclick="display('%')" class="button2">%</button>
+    <button onclick="clear12()" class="button2">C</button>
+    <br>
+    <button onclick="display('7')">7</button>
+    <button onclick="display('8')">8</button>
+    <button onclick="display('9')">9</button>
+    <button onclick="display('/')" class="button2">/</button>
+
+    <br>
+    <button onclick="display('4')">4</button>
+    <button onclick="display('5')">5</button>
+    <button onclick="display('6')">6</button>
+    <button onclick="display('*')" class="button2">X</button>
+    <br>
+    <button onclick="display('1')">1</button>
+    <button onclick="display('2')">2</button>
+    <button onclick="display('3')">3</button>
+    <button class="button2">-</button>
+    <br>
+    <button onclick="display('0')">0</button>
+    <button onclick="display('.')" class="button2">.</button>
+    <button onclick="calculate()" id="d_b">=</button>
+    <button onclick="display('+')" class="button2">+</button>
+
+
+  </div>
+</body>
+
+</html>
