@@ -1,0 +1,34 @@
+
+body {
+  text-align: center;
+  vertical-align: center;
+}
+
+button {
+  height: 40px;
+  background-color: darkgray;
+  width: 80px;
+}
+
+.button2 {
+  background-color: lightgray;
+}
+
+.cal {
+
+  padding: 20px;
+  box-shadow:
+
+}
+
+#d_b {
+  background-color: lightblue;
+}
+.cb{
+  background-color: rgb(240, 84, 84);
+}
+
+#display {
+  width: 499px;
+  height: 60px;
+}

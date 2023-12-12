@@ -2,68 +2,9 @@
 <html>
 
 <head>
-
-  <style>
-    body {
-      text-align: center;
-      vertical-align: center;
-    }
-
-    button {
-      height: 40px;
-      background-color: darkgray;
-      width: 80px;
-    }
-
-    .button2 {
-      background-color: lightgray;
-    }
-
-    .cal {
-
-      padding: 20px;
-      box-shadow:
-
-    }
-
-    #d_b {
-      background-color: lightblue;
-    }
-
-    #display {
-      width: 325px;
-      height: 60px;
-    }
-  </style>
-  <script>
-    function clear12() {
-
-      document.getElementById('display').value = '';
-
-    }
-
-    function display(value) {
-      var currentDisplay = document.getElementById('display').value;
-
-     
-      if (value === '.' && currentDisplay.slice(-1) === '.') {
-       
-        return;
-      }
-
-      document.getElementById('display').value += value;
-    }
-
-
-    function calculate() {
-
-      try {
-        document.getElementById('display').value = eval(document.getElementById('display').value);
-      } catch (error) {
-        document.getElementById('display').value = 'Error';
-      }
-    }
-  </script>
+  <link rel="stylesheet" type="text/css" href="calc.css" />
+ 
+  <script type="text/javascript" src="calc.js"></script>
 </head>
 
 <body>
@@ -72,33 +13,64 @@
     <br>
 
     <br>
-    <button onclick="display('(')" class="button2">(</button>
 
+    <button class="button2" onclick="factorial()">X!</button>
+    <button onclick="sct('sin')" class="button2">sin</button>
+    <button onclick="display('(')" class="button2">(</button>
     <button onclick="display(')')" class="button2">)</button>
     <button onclick="display('%')" class="button2">%</button>
-    <button onclick="clear12()" class="button2">C</button>
+    <button onclick="clear12()" class="cb">C</button>
     <br>
+
+    <button class="button2" onclick="Log()">ln</button>
+    <button onclick="sct('cos')" class="button2">cos</button>
     <button onclick="display('7')">7</button>
     <button onclick="display('8')">8</button>
     <button onclick="display('9')">9</button>
     <button onclick="display('/')" class="button2">/</button>
 
     <br>
+
+    <button  class="button2" onclick="Log()">ln</button>
+    <button onclick="sct('tan')" class="button2">tan</button>
     <button onclick="display('4')">4</button>
     <button onclick="display('5')">5</button>
     <button onclick="display('6')">6</button>
     <button onclick="display('*')" class="button2">X</button>
+
     <br>
+
+    <button class="button2" onclick="squareRoot()">√</button>
+    <button onclick="Log()" class="button2">log</button>
     <button onclick="display('1')">1</button>
     <button onclick="display('2')">2</button>
     <button onclick="display('3')">3</button>
     <button class="button2">-</button>
+
     <br>
+
+    <button class="button2" onclick="power()">X^y</button>
+    <button class="button2">π</button>
     <button onclick="display('0')">0</button>
     <button onclick="display('.')" class="button2">.</button>
     <button onclick="calculate()" id="d_b">=</button>
     <button onclick="display('+')" class="button2">+</button>
 
+    <br>
+
+    <button class="button2" onclick="inverse()">inv</button>
+    <button class="button2" onclick="e()">e</button>
+    <button class="button2" onclick="calculate()">Ans</button>
+    <button class="button2" onclick="exponent()">EXP</button>
+    <button class="button2" onclick="inverse()">inv</button>
+    <button class="button2" onclick="e()">e</button>
+    
+
+    <br>
+    <input type="radio" name="group" onclick="toggleMode()" id="degree">Degree
+    <input type="radio" name="group" onclick="toggleMode()" id="rad">Rad
+    <br>
+    
 
   </div>
 </body>
