@@ -2,16 +2,29 @@
 body {
   text-align: center;
   vertical-align: center;
+  
 }
 
 button {
   height: 40px;
   background-color: darkgray;
   width: 80px;
+  border: none;
+  color: #405265;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #6586A8;
+  color: black;
+  border: 2px solid #555555;
+  border:none;
 }
-
+button:hover {
+    background-color: #555555;
+    color: white;
+}
 .button2 {
-  background-color: lightgray;
+  background-color: #B3C6DA;
+  margin-top: 1.5px;
 }
 
 .cal {
