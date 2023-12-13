@@ -45,3 +45,17 @@ button:hover {
   width: 499px;
   height: 60px;
 }
+label {
+    display: inline-block;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+  }
+
+  label:hover {
+    background-color: #45a049;
+  }
